@@ -69,7 +69,7 @@ blockquote {
 
 
 .blog {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr [obsah-start] 4fr [obsah-end] 2fr;
@@ -98,6 +98,9 @@ h1 {
 h2 {
 	  color: var(--zelena);
 	  font-size: 60px;
+	  margin-top: 40px;
+	  position: relative;
+	  bottom: -15px;
 }
  
 blockquote::before,

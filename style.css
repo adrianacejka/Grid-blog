@@ -66,3 +66,108 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+
+
+.blog {
+	max-width: 1100px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr [obsah-start] 4fr [obsah-end] 2fr;
+	gap: 40px;
+}
+
+header,
+h2,
+p {
+	grid-column: obsah-start / obsah-end;
+	margin: 0;
+}
+
+.meta {
+	color: var(--seda);
+	font-size: 16px;
+}
+
+h1 {
+	  color: var(--zelena);
+	  font-size: 70px;
+	  margin-bottom: 70px;
+	  line-height: 1.2;
+}
+ 
+h2 {
+	  color: var(--zelena);
+	  font-size: 50px;
+}
+ 
+blockquote::before,
+blockquote::after {
+	content: "";
+	display: block;
+	width: 120px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin: 20px auto;
+}
+
+
+figure {
+	grid-column: 1 / -1;
+	margin: 0;
+	color: var(--seda);
+	font-size: 16px;
+}
+
+
+img {
+	width: 100%;
+}
+
+blockquote {
+	grid-column: 1 / -1;
+	margin: 0;
+	text-align: center;
+	color: var(--seda);
+	font-size: 180%;
+}
+
+
+.tip {
+	background-color: var(--svetla);
+	padding: 20px;
+	font-size: 14px;
+	color: var(--tmava);
+	line-height: 1.7;
+	text-align: right;
+}
+
+.tip-vlevo {
+	grid-column: 1 / obsah-start;
+	padding: 20px;
+	background-color: var(--svetla);
+	align-self: start;
+	border-right: 2px solid var(--zluta);
+}
+
+
+.tip-vpravo {
+	text-align: left;
+	align-self: start;
+	border-left: 2px solid var(--zluta);
+}
+
+
+.tip a {
+	color: var(--cervena);
+}
+
+footer {
+	grid-column: 2 / 3;
+	color: var(--seda);
+	margin-top: 50px;
+	font-size: 14px;
+}
+
+footer a {
+	color: var(--seda);
+}
